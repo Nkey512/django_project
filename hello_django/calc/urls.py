@@ -3,5 +3,5 @@ from hello_django.calc import views
 
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.IndexView.as_view()),
 ]
