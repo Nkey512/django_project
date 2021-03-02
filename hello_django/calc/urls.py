@@ -4,5 +4,5 @@ from hello_django.calc import views
 
 urlpatterns = [
     path('', views.index),
-    path('<int:a>/<int:b>', views.index, name='calc')
+    path('<int:a>/<int:b>', views.Calc.as_view(), name='calc')
 ]
