@@ -1,1 +1,8 @@
-<h1>Result: {{ sum }}</h1>
+<table border="1">
+    {% for x in zapis %}
+        <tr>
+            <td>{{ x.value }}</td>
+            <td>{{ x.timestamp }}</td>
+        </tr>
+    {% endfor %}
+</table>

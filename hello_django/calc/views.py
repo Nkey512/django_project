@@ -17,7 +17,11 @@ class Calc(TemplateView):
 
 
 def history(request):
-    return render(request, 'history.html', context=History.objects.all())
+    h = History.objects.all()
+    length = len(h) if len(h) > 10 else 10
+    return render(request, 'history.html', context={
+        'zapis': h[length-10:]
+    })
 
 
 def index(request, a=0, b=0):
